@@ -1,0 +1,159 @@
+/**
+ * importer.less
+ *
+ * By default, new Sails projects are configured to compile this file
+ * from LESS to CSS.  Unlike CSS files, LESS files are not compiled and
+ * included automatically unless they are imported below.
+ *
+ * The LESS files imported below are compiled and included in the order
+ * they are listed.  Mixins, variables, etc. should be imported first
+ * so that they can be accessed by subsequent LESS stylesheets.
+ *
+ * (Just like the rest of the asset pipeline bundled in Sails, you can
+ * always omit, customize, or replace this behavior with SASS, SCSS,
+ * or any other Grunt tasks you like.)
+ */
+
+
+
+// For example:
+//
+// @import 'variables/colors.less';
+// @import 'mixins/foo.less';
+// @import 'mixins/bar.less';
+// @import 'mixins/baz.less';
+//
+// @import 'styleguide.less';
+// @import 'pages/login.less';
+@import 'fonts.less';
+//
+// etc.
+
+@bodybgcolor: #f0f0f0;
+@si-title:#f44336;
+@title-height:350px;
+@shadow: 0px 2px 5px hsla(0,0%,0%,0.7);
+@lshadow:0px 2px 5px hsla(0,0%,0%,0.5);
+@form-colors: #f44336;
+
+.index-title{
+	background: url("../images/takeabreak.jpg");
+    background-size: 100% 600px;
+    background-repeat: no-repeat;
+    background-origin: 0px -500px;
+    height: @title-height;
+    background-color:black;
+    box-shadow:@shadow;
+}
+
+body{
+	background-color: @bodybgcolor;
+}
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title-overlay{
+	height: @title-height;
+	background-color: hsla(0,0%,0%,0.55);
+}
+.title{
+	height: @title-height
+}
+.tab-title{
+	font-family: LatoBI;
+	font-size: 62px;
+	color:white;
+}
+.tab-subtitle{
+	font-family: LatoI;
+	font-size: 32px;	
+	margin-top: -15px;
+	color:white;
+}
+.np{
+	padding: 0px;
+}
+
+.mtl{
+	margin-top:100px;
+}
+
+.box(){
+	border: 0px;
+	border-radius: 10px;
+	background:white;
+	box-shadow: @lshadow;
+
+}
+.infobox{
+	.box();
+	height: 600px;	
+}
+
+.signinbox{
+	.box();
+	height: 345px;
+}
+
+.si-title{
+	color:@si-title;
+	font-size: 24px;
+	font-family: LatoSB;
+	margin-top:10px;	
+}
+
+.si-form{
+	margin-top: 10px;
+}
+
+/* label color */
+   .input-field label {
+     color:hsla(0,0%,0%,0.75);
+     font-size: 20px;
+     font-family: Lato;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label,.input-field input[type=password]:focus + label {
+     color: @form-colors;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus,.input-field input[type=password]:focus {
+     border-bottom: 1px solid @form-colors;
+     box-shadow: 0 1px 0 0 @form-colors;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid @form-colors;
+     box-shadow: 0 1px 0 0 @form-colors;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid @form-colors;
+     box-shadow: 0 1px 0 0 @form-colors;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: @form-colors;
+   }
+
+   .input-field input{
+   	color:@form-colors;
+   	font-size: 20px;
+   	font-family: Lato;
+   }
+   .input-field i{
+   	font-size:40px !important;
+   }
+   .forgot{
+   	font-family: LatoL;
+   	font-size: 24px;
+   	color:@form-colors;
+   	cursor: pointer;
+   }
+
+   .si-button{
+   	margin-top:33px;
+   }

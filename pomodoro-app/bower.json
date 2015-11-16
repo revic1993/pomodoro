@@ -1,0 +1,27 @@
+{
+  "name": "pomodoro-app",
+  "version": "1.0.0",
+  "homepage": "https://github.com/revic1993/pomodoro",
+  "authors": [
+    "Rujul Solanki <rujulsolanki1993@gmail.com>"
+  ],
+  "description": "an app that lets pomodoro meets todo list",
+  "keywords": [
+    "pomodoro",
+    "todo",
+    "list",
+    "break"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#~0.97.3"
+  }
+}
